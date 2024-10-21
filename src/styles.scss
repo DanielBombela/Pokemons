@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; color: #475757 ;}
+.card{
+
+
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); /* Sombra */
+  text-align: center; /* Centrar texto */
+  transition: transform 0.3s, box-shadow 0.3s; /* Efecto de transición */
+  cursor: pointer; /* Cursor de mano al pasar el ratón */
+}
+.card:hover{
+  background-color: #f9fbff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
+  -webkit-transform: translateY(-2px);
+  -moz-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  -o-transform: translateY(-2px);
+}

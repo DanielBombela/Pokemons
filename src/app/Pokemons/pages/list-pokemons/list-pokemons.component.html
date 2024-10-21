@@ -1,0 +1,24 @@
+<div class="container">
+  <h1 class="mt-4 mb-0 fw-bold">Lista de Pokemones</h1>
+  <p class="mt-2">Página actual: {{ currentPage + 1 }}</p>
+  <div class="row">
+    <div class="col-xs-12 col-md-3 mt-3" *ngFor="let pokemon of pokemons">
+      <app-card-pokemon
+        (click)="getDetailPokemon(pokemon)"
+        [Pokemon]="pokemon"
+      ></app-card-pokemon>
+    </div>
+  </div>
+  <div class="pagination mt-3 d-flex justify-content-between">
+    <button
+      [disabled]="currentPage == 0"
+      class="btn btn-outline-primary me-3 btn-sm"
+      (click)="prevPage()"
+    >
+      Anterior
+    </button>
+    <button class="btn btn-outline-primary me-3 btn-sm" (click)="nextPage()">
+      Siguiente
+    </button>
+  </div>
+</div>
